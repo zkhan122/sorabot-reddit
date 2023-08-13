@@ -19,7 +19,7 @@ class Bot():
         user_agent= self.user_agent, 
         username= self.username)
 
-        subreddit = reddit.subreddit("worldnews")
+        subreddit = reddit.subreddit("////") # replace with name of subreddit
         print(subreddit)
 
         for post in subreddit.hot(limit=20):
@@ -35,7 +35,7 @@ class Bot():
 
 
 if __name__=="__main__":
-    bot = Bot("4u59Mj03AIwY0R55ABs_FQ", "pGB-myBerIjoGk6m57cof6vQH9BOrw",
-               "<console:SORA-BOT:1.0>", "Illustrious_Park7068")
 
+    bot = Bot("client_id", "client_secret_key",
+               "user_agent", "username")  # replace string args with your own
     bot.run()
