@@ -9,4 +9,4 @@
 4)  Name the app, select what type of app it is which in this case is a "Script"
 5)  You can add optional description and for redirect url put "https://localhost"
 6)  Then click create app.
-7)  You will then find the !(https://github.com/zkhan122/sorabot-reddit/blob/main/clientid-redditbot.png)
+7)  You will then find the ![client_id](clientid-redditbot.png)
