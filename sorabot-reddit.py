@@ -5,12 +5,15 @@ import time
 # https://www.reddit.com/prefs/apps
 
 class Bot():
-    def __init__(self, client_id, client_secret, user_agent, username):
+    def __init__(self, client_id, client_secret, user_agent, username, samples,
+    subreddit_name):
         
         self.client_id = client_id
         self.client_secret = client_secret
         self.user_agent = user_agent
         self.username = username
+        self.samples = samples
+        self.subreddit_name = subreddit_name
     
     def run(self):
         reddit = praw.Reddit(
@@ -19,23 +22,26 @@ class Bot():
         user_agent= self.user_agent, 
         username= self.username)
 
-        subreddit = reddit.subreddit("////") # replace with name of subreddit
-        print(subreddit)
-
-        for post in subreddit.hot(limit=20):
-            print("---------------------------------")
-            print(str(post.title))
+        subreddit_channel = reddit.subreddit(self.subreddit_name)
+        print(subreddit_channel)
+        
+        i = 1
+        for post in subreddit_channel.hot(limit=self.samples):
+            print("---------------------------------" + "\n")
+            print("POST " + str(i) + " " + str(post.title))
             print("Link: " + str(post.url) + "\n") # grabbing the title
 
             for comment in post.comments:
                 if hasattr(comment, "body"):
                     comment_lower = comment.body.lower()
                     print("-------------------------------")
-                    print("Comment: " + str(comment.body))        
-
+                    print("Comment: " + str(comment.body)) 
+            i += 1
+            time.sleep(10)
 
 if __name__=="__main__":
+    bot = Bot(client_id="", client_secret="",
+               user_agent="",
+               username="", samples=__, subreddit_name="")
 
-    bot = Bot("client_id", "client_secret_key",
-               "user_agent", "username")  # replace string args with your own
     bot.run()
