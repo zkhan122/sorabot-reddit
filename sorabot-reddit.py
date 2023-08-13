@@ -42,6 +42,6 @@ class Bot():
 if __name__=="__main__":
     bot = Bot(client_id="", client_secret="",
                user_agent="",
-               username="", samples=__, subreddit_name="")
+               username="", samples=__, subreddit_name="") # replace with own args
 
     bot.run()
