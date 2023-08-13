@@ -15,7 +15,7 @@
  secret_key:
    ![secret-key](secret_key-redditbot.png)
 
-and the developer (which in this case is your reddit username):
+and the developer (which in this case is your Reddit username):
 ![dev-reddit-bot](dev-redditbot.png)
 
 8) And for the user agent you can put "<console:TEXT" (replacing "TEXT" with your own string text)
