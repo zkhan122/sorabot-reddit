@@ -15,8 +15,10 @@
  secret_key:
    ![secret-key](secret_key-redditbot.png)
 
-and the developer (which in this case is your reddit username):
+and the developer (which in this case is your reddit username)
 
 
 8) And for the user agent you can put "<console:TEXT" (replacing "TEXT" with your own string text)
-9) Then once thats done, you can access the code and then change the necessary arguments then run it!
+9) Then once thats done, you can access the code and then change the necessary arguments
+  (NOTE: the parameter `samples` refers to the amount of posts (integer) in the subreddit you want to go through)
+10) Then run it!
