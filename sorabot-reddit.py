@@ -1,6 +1,7 @@
 import praw
 import random
 import time
+import os
 
 # https://www.reddit.com/prefs/apps
 
@@ -38,10 +39,10 @@ class Bot():
                     print("Comment: " + str(comment.body)) 
             i += 1
             time.sleep(10)
-
+            
 if __name__=="__main__":
-    bot = Bot(client_id="", client_secret="",
+    bot = Bot(client_id="", client_secret=""
                user_agent="",
-               username="", samples=__, subreddit_name="") # replace with own args
+               username="", samples=0, subreddit_name="")
 
     bot.run()
