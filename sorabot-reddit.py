@@ -89,21 +89,16 @@ class Bot():
             i += 1
             time.sleep(5)
 
-       # for i in range(len(comment_feed)):
-            # prediction_buffer.append(stats.mean(self.sentiment(comment_feed[i])))
-
 
         return 0
 
         
             
 if __name__=="__main__":
-    bot = Bot(client_id="4u59Mj03AIwY0R55ABs_FQ",
-              client_secret="pGB-myBerIjoGk6m57cof6vQH9BOrw",
-              user_agent="<client:SORA-BOT:1.0>",
-              username="Illustrious_Park7068", samples=3, subreddit_name="kpop")
+    bot = Bot(client_id="",
+              client_secret="",
+              user_agent="",
+              username="", samples=0, subreddit_name="")
 
-    arr = ["hello i hate you!", "hello, i dont hate you!", "lol", "bog", "h"]
     print(bot.run())
-   # print(bot.sentiment(arr))
 
