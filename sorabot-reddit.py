@@ -99,6 +99,7 @@ class Bot():
 
 
 if __name__=="__main__":
+    # CHANGE PARAMETERS (read README.md)
     bot = Bot(client_id="",
               client_secret="",
               user_agent="",
