@@ -99,10 +99,9 @@ class Bot():
 
 
 if __name__=="__main__":
-    bot = Bot(client_id="4u59Mj03AIwY0R55ABs_FQ",
-              client_secret="pGB-myBerIjoGk6m57cof6vQH9BOrw",
-              user_agent="<console:SORABOT-V1>",
-              username="Illustrious_Park7068", samples=3, subreddit_name="kpop")
-
+    bot = Bot(client_id="",
+              client_secret="",
+              user_agent="",
+              username="", samples=0, subreddit_name="") 
     bot.run()
 
