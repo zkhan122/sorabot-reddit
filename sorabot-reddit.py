@@ -6,6 +6,8 @@ import numpy as np
 import statistics as stats
 from itertools import islice
 from nltk.sentiment import SentimentIntensityAnalyzer
+import nltk
+nltk.download('vader_lexicon')
 
 # https://www.reddit.com/prefs/apps
 
@@ -82,8 +84,8 @@ class Bot():
                 neg_prediction_buffer.append(scores[1]) # negative scores array
                 
             # finding the mean for each buffer
-            score_1 = stats.mean(pos_prediction_buffer)
-            score_2 = stats.mean(neg_prediction_buffer)
+            score_1 = stats.mean(pos_prediction_buffer) if pos_prediction_buffer else 0
+            score_2 = stats.mean(neg_prediction_buffer) if neg_prediction_buffer else 0
             # reassigning back into same buffer
             sentiment_buffer = self.result(sentiment_buffer, score_1, score_2)
             
@@ -100,9 +102,19 @@ class Bot():
 
 if __name__=="__main__":
     # CHANGE PARAMETERS (read README.md)
-    bot = Bot(client_id="",
+    bot = Bot(client_id="IDaPGIi7nQueqZAjh8Pm0w",
               client_secret="",
               user_agent="",
-              username="", samples=0, subreddit_name="") 
+              username="", samples=0,
+              subreddit_name="") 
     bot.run()
+
+
+
+
+
+
+# break down text into tokens
+# understand reationship between tokens, e.g. subject, verbs
+# create meaning using sentiment - pos, negative, neutral
 
